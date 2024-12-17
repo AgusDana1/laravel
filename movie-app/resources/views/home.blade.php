@@ -9,6 +9,11 @@
     <title>{{ $title }}</title>
 
     <style>
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         padding: 0;
@@ -36,7 +41,7 @@
               font-style: italic; 
               color: #fff;
               text-shadow:0 0 10px #000;
-              ">Gus 
+              ">AD
               <span style="color: #03fce8; 
               font-weight: bold; 
               font-style: italic;" 
@@ -65,7 +70,7 @@
                   color: #000;
                   text-shadow:0 0 2px #000;
                   width: 100%;"
-                  >Gus 
+                  >AD
                   <span style="color: #03fce8;
                   text-shadow:0 0 2px #000;
                   font-weight: bold; 
@@ -183,6 +188,13 @@
           aria-label="Slide 3"
           style="background-color: #3d3737; border-radius: 50%; width: 12px; height: 12px;"
         ></button>
+        <button
+          type="button"
+          data-bs-target="#projectCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+          style="background-color: #3d3737; border-radius: 50%; width: 12px; height: 12px;"
+        ></button>
       </div>
 
       <!-- Slider content -->
@@ -193,12 +205,13 @@
           <div class="row d-sm-flex justify-content-center" style="padding: 20px">
             <!-- Left (Image Placeholder) -->
             <img src="{{ asset('img/nextt.jpg') }}" alt="Foto-1" class="col-6 img-fluid" style="height: 320px;
-              width: 320px;
-              border-radius: 12px;">
+              width: 330px;
+              border-radius: 50%">
             <!-- Right (Text) -->
             <div class="col-md-6 d-flex align-items-center"> 
               <div style="padding: 20px;">
-                <h2 style="font-weight: bold">Project 1:</h2>
+                <h2 style="font-weight: bold">Project 1 <span class="fw-bold text-primary" 
+                  style="cursor: pointer;">Next Js</span> :</h2>
                 <p style="text-align: justify; line-height: 1.8;">
                   Project ini dibuat oleh saya sendiri menggunakan Framework
               seperti React Js pada front-endnya dan pada bagian server side
@@ -222,7 +235,8 @@
             <!-- Right (Text) -->
             <div class="col-md-6 d-flex align-items-center"> 
               <div style="padding: 20px;">
-                <h2 style="font-weight: bold">Project 2:</h2>
+                <h2 style="font-weight: bold">Project 2 <span class="fw-bold text-primary" 
+                  style="cursor: pointer;">Node Js</span> :</h2>
                 <p style="text-align: justify; line-height: 1.8;">
                   Kenapa ada gambar Node js? Ini kan lagi pakai Laravel?
                   Ya karena saya pernah membuatkan website untuk client saya 
@@ -248,14 +262,44 @@
             <!-- Right (Text) -->
             <div class="col-md-6 d-flex align-items-center"> 
               <div style="padding: 20px;">
-                <h2 style="font-weight: bold">Project 3:</h2>
+                <h2 style="font-weight: bold">Project 3 <span class="fw-bold text-primary" 
+                  style="cursor: pointer;">React Js</span> :</h2>
                 <p style="text-align: justify; line-height: 1.8;">
                   Kenapa ada gambar React Js disini? Dikarenakan saya pernah
                   menggunakan React Js sebagai Front-End dan menurut studi
                   React Js sangat Fleksibel untuk digunakan. Bisa di Next Js,
                   bisa di Laravel, dan juga bisa digunakan pada project HTML,CSS,
                   yang mungkin memerlukan website yang responsif namun tidak seribet
-                  menggunakan CSS only.
+                  menggunakan CSS only. Jika ingin mengetahui lebih lanjut, silahkan 
+                  kunjungi Page selanjutnya.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{-- Slide 4 --}}
+        <div class="carousel-item">
+          <div class="row d-sm-flex justify-content-center" style="padding: 20px">
+            <!-- Left (Image Placeholder) -->
+            <img src="{{ asset('img/laravel.png') }}" alt="Foto-1" 
+            class="col-6 img-fluid" 
+            style="height: 320px;
+              width: 320px;
+              border-radius: 12px;">
+            <!-- Right (Text) -->
+            <div class="col-md-6 d-flex align-items-center"> 
+              <div style="padding: 20px;">
+                <h2 style="font-weight: bold">Project 4 <span class="fw-bold text-primary" 
+                  style="cursor: pointer;">Laravel</span> :</h2>
+                <p style="text-align: justify; line-height: 1.8;">
+                  Kenapa ada gambar Laravel disini? Dikarenakan saya sedang
+                  menggunakan Laravel sebagai Fullstack dan menurut studi
+                  Laravel sangat Fleksibel untuk digunakan. Dan bisa digunakan
+                  pada project HTML,CSS, maupun React, Bootstrap dll didalamnya,
+                  yang mungkin memerlukan website yang responsif namun tidak seribet
+                  menggunakan CSS only. Jika ingin mengetahui lebih lanjut, silahkan 
+                  kunjungi Page selanjutnya.
                 </p>
               </div>
             </div>
@@ -265,7 +309,7 @@
 
       <!-- Navigation Arrow -->
       <button
-        class="carousel-control-prev"
+        class="carousel-control-prev "
         type="button"
         data-bs-target="#projectCarousel"
         data-bs-slide="prev"
@@ -273,7 +317,7 @@
         <span
           class="carousel-control-prev-icon p-2"
           aria-hidden="true"
-          style="background-color: rgba(0,0,0,0.2);"
+          style="background-color: rgba(0, 0, 0, 0.2);"
         ></span>
         <span class="visually-hidden">Previous</span>
       </button>
@@ -307,7 +351,7 @@
         padding: 8px 0;
       "
     >
-      Agus Dana <span style="color: yellow; font-style:oblique">Coders</span>
+      Agus Dana <span style="color: yellow; font-style:oblique">Portfolio</span>
     </div>
 
     <!-- Skills Section -->

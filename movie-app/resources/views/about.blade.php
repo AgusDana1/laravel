@@ -36,7 +36,7 @@
                 font-style: italic; 
                 color: #fff;
                 text-shadow:0 0 10px #000;"
-                >Gus 
+                >AD
                 <span style="color: #03fce8; 
                 font-weight: bold; 
                 font-style: italic;" 
@@ -64,7 +64,7 @@
                     font-style: italic; 
                     color: #000;
                     text-shadow:0 0 2px #000;
-                    width: 100%;">Gus <span style="color: #03fce8; text-shadow:0 0 2px #000;font-weight: bold; font-style: italic;" 
+                    width: 100%;">AD <span style="color: #03fce8; text-shadow:0 0 2px #000;font-weight: bold; font-style: italic;" 
                     href="/">Project</span></a> 
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -143,8 +143,67 @@
           </nav>
 
           {{-- About Me --}}
-          
-          {{-- About Me End --}}
+          {{-- Judul --}}
+          <h1 class="judul 
+          d-flex 
+          justify-content-center 
+          align-items-center 
+          gap-2
+          mt-3"
+          >About
+          <span class="fw-bold" 
+          style="font-style: italic;"
+          >Me</span></h1>
+
+          {{-- content --}}
+          <div class="container mt-5">
+            <div class="row justify-content-center"
+            style="max-width: 1200px; margin:auto; margin-top: 20px; border-radius: 20px;">
+              <!-- Card Utama -->
+              <div
+                class="col-12 col-md-8 col-lg-6 p-4"
+                style="
+                  background: linear-gradient(to bottom, #1e90ff, #00bfff);
+                  border-radius: 10px;
+                  color: #fff;
+                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                "
+              >
+                <div class="row g-3 align-items-center">
+                  <!-- Gambar -->
+                  <div class="col-12 col-md-5">
+                    <img
+                      src="{{ asset('img/agus.png') }}"
+                      alt="Agus Dana"
+                      class="img-fluid rounded"
+                      style="max-width: 100%; height: auto;"
+                    />
+                  </div>
+                  <!-- Biodata -->
+                  <div class="col-12 col-md-7">
+                    <h4 class="fw-bold text-center text-md-start mb-3">
+                      My <span class="fw-bold">Biodata</span>
+                    </h4>
+                    <div class="container-bio d-flex">
+                      <p class="mb-1">
+                        <strong class="g-3">Nama:</strong> Agus Dana <br />
+                        <strong class="g-3">Date of Birth:</strong> May 21, 2008 <br />
+                        <strong class="g-3">Address:</strong> Bali, Indonesia <br />
+                        <strong class="g-3">ZIP Code:</strong> 80119 <br />
+                        <strong class="g-3">Email:</strong> agusdana@gmail.com <br />
+                        <strong class="g-3">Phone:</strong> +628176726532
+                      </p>
+                    </div>
+                    <p>
+                      <span class="text-warning fw-bold"
+                      style="font-size: 23px">8</span> Project Complete
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{-- About Me End --}} 
 
     {{-- Content Skill Require --}}
     <!-- Skills Section -->
