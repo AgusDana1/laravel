@@ -30,50 +30,44 @@
         <!-- Navbar content -->
         <nav class="navbar navbar-expand-lg bg-primary"> 
             <div class="container-fluid">
-              <a class="navbar-brand" 
-              href="#" 
-              style="font-weight: bold; 
-              font-style: italic; 
-              color: #fff;
-              text-shadow:0 0 10px #000;
-              ">Gus 
-              <span style="color: #03fce8; 
-              font-weight: bold; 
-              font-style: italic;" 
-              href="#">Project</span></a>
-              {{-- Navbar toggle --}}
-              <button class="navbar-toggler" 
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasScrolling"
-              aria-controls="offcanvasScrollingLabel"
-              style="background-color: #fff"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                <a class="navbar-brand" 
+                href="#" 
+                style="font-weight: bold; 
+                font-style: italic; 
+                color: #fff;
+                text-shadow:0 0 10px #000;"
+                >Gus 
+                <span style="color: #03fce8; 
+                font-weight: bold; 
+                font-style: italic;" 
+                href="#">Project</span></a>
 
-              <div class="offcanvas offcanvas-start d-lg-none" 
-              data-bs-scroll="true" 
-              data-bs-backdrop="true" 
-              tabindex="-1" 
-              id="offcanvasScrolling" 
-              aria-labelledby="offcanvasScrollingLabel">
+                {{-- Navbar toggle --}}
+                <button class="navbar-toggler" 
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrollingLabel"
+                style="background-color: #fff">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-start d-lg-none" 
+            data-bs-scroll="true" 
+            data-bs-backdrop="true" 
+            tabindex="-1" 
+            id="offcanvasScrolling" 
+            aria-labelledby="offcanvasScrollingLabel">
 
                 <div class="offcanvas-header">
-                  <a class="navbar-brand" href="/" style="font-weight: bold;
-                  font-style: italic; 
-                  color: #000;
-                  text-shadow:0 0 2px #000;
-                  width: 100%;"
-                  >Gus 
-                  <span style="color: #03fce8;
-                  text-shadow:0 0 2px #000;
-                  font-weight: bold; 
-                  font-style: italic;" 
-                  href="/"
-                  >Project</span></a> 
+                    <a class="navbar-brand" href="/" style="font-weight: bold;
+                    font-style: italic; 
+                    color: #000;
+                    text-shadow:0 0 2px #000;
+                    width: 100%;">Gus <span style="color: #03fce8; text-shadow:0 0 2px #000;font-weight: bold; font-style: italic;" 
+                    href="/">Project</span></a> 
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
+                </div>
 
                   {{-- Offcanvas body --}}
                 <div class="offcanvas-body">
@@ -119,10 +113,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/about">About Me</a>
+                    <a class="nav-link active" href="/about">About Me</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -148,170 +142,13 @@
             </div>
           </nav>
 
-          {{-- Content Slider --}}
-          <div
-      id="projectCarousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      style="max-width: 100%; margin:auto; margin-top: 20px; border-radius: 20px;"
-    >
-      <!-- Button Indicators -->
-      <div
-        class="carousel-indicators"
-        style="margin-bottom: -8px; justify-content: center"
-      >
-        <button
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-          style="background-color: #3d3737; border-radius: 50%; width: 12px; height: 12px;"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-          style="background-color: #3d3737; border-radius: 50%; width: 12px; height: 12px;"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-          style="background-color: #3d3737; border-radius: 50%; width: 12px; height: 12px;"
-        ></button>
-      </div>
-
-      <!-- Slider content -->
-      <div class="carousel-inner"
-      style="gap: 15px;">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row d-sm-flex justify-content-center" style="padding: 20px">
-            <!-- Left (Image Placeholder) -->
-            <img src="{{ asset('img/nextt.jpg') }}" alt="Foto-1" class="col-6 img-fluid" style="height: 320px;
-              width: 320px;
-              border-radius: 12px;">
-            <!-- Right (Text) -->
-            <div class="col-md-6 d-flex align-items-center"> 
-              <div style="padding: 20px;">
-                <h2 style="font-weight: bold">Project 1:</h2>
-                <p style="text-align: justify; line-height: 1.8;">
-                  Project ini dibuat oleh saya sendiri menggunakan Framework
-              seperti React Js pada front-endnya dan pada bagian server side
-              rendering (SSR) saya menggunakan Next Js. Mengapa saya
-              menggunakan Next Js sebagai server side? Karena hasil dari
-              riset yang saya dapat bahwa Next Js lebih populer dan mudah
-              digunakan untuk proses pengembangan web apps.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row d-sm-flex justify-content-center" style="padding: 20px">
-            <!-- Left (Image Placeholder) -->
-            <img src="{{ asset('img/node-js-removebg-preview.png') }}" alt="Foto-1" class="col-6 img-fluid" style="height: 320px;
-              width: 320px;
-              border-radius: 12px;">
-            <!-- Right (Text) -->
-            <div class="col-md-6 d-flex align-items-center"> 
-              <div style="padding: 20px;">
-                <h2 style="font-weight: bold">Project 2:</h2>
-                <p style="text-align: justify; line-height: 1.8;">
-                  Kenapa ada gambar Node js? Ini kan lagi pakai Laravel?
-                  Ya karena saya pernah membuatkan website untuk client saya 
-                  menggunakan Node Js dan menggunakan API berupa Express Js.
-                  Dan untuk Database menggunakan MySql, kenapa MySql? Karena,
-                  MySql sangat cocok untuk pembuatan project Website yang kompleks
-                  dan laravel lebih cocok jika menggunakan database MySql.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="row d-sm-flex justify-content-center" style="padding: 20px">
-            <!-- Left (Image Placeholder) -->
-            <img src="{{ asset('img/react-js-removebg-preview.png') }}" alt="Foto-1" 
-            class="col-6 img-fluid" 
-            style="height: 320px;
-              width: 320px;
-              border-radius: 12px;">
-            <!-- Right (Text) -->
-            <div class="col-md-6 d-flex align-items-center"> 
-              <div style="padding: 20px;">
-                <h2 style="font-weight: bold">Project 3:</h2>
-                <p style="text-align: justify; line-height: 1.8;">
-                  Kenapa ada gambar React Js disini? Dikarenakan saya pernah
-                  menggunakan React Js sebagai Front-End dan menurut studi
-                  React Js sangat Fleksibel untuk digunakan. Bisa di Next Js,
-                  bisa di Laravel, dan juga bisa digunakan pada project HTML,CSS,
-                  yang mungkin memerlukan website yang responsif namun tidak seribet
-                  menggunakan CSS only.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Navigation Arrow -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#projectCarousel"
-        data-bs-slide="prev"
-      >
-        <span
-          class="carousel-control-prev-icon p-2"
-          aria-hidden="true"
-          style="background-color: rgba(0,0,0,0.2);"
-        ></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#projectCarousel"
-        data-bs-slide="next"
-      >
-        <span
-          class="carousel-control-next-icon p-2"
-          aria-hidden="true"
-          style="background-color: rgba(0, 0, 0, 0.2);"
-        ></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+          {{-- About Me --}}
+          
+          {{-- About Me End --}}
 
     {{-- Content Skill Require --}}
-    {{-- Title --}}
-    <div
-      style="
-        max-width: 100%;
-        margin: 0 auto;
-        background-color: #0d6efd;
-        color: white;
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 50px;
-        padding: 8px 0;
-      "
-    >
-      Agus Dana <span style="color: yellow; font-style:oblique">Coders</span>
-    </div>
-
     <!-- Skills Section -->
-    <div style="text-align: center; margin-top: 50px">
+    <div style="text-align: center; margin-top: 30px">
       <!-- Title -->
       <h1 style="font-size: 2.7rem; font-weight: 500; margin-bottom: 30px">
         MY <span style="font-weight: bold; color: #000; font-style: italic;">SKILLS</span>
