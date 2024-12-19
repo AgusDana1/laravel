@@ -33,78 +33,6 @@
         color: #fff;
       }
 
-      /* container biodata */
-      .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: linear-gradient(to bottom, #1e90ff, #00bfff);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            color: #fff;
-        }
-        .biodata-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .image-container {
-            flex: 1 1 200px;
-            min-width: 200px;
-            max-width: 300px;
-        }
-
-        .image-container img:hover {
-          box-shadow: 0 0 4px 3px rgb(8, 104, 172);
-          transition: all 0.5s;
-        }
-
-        .biodata {
-            flex: 1 1 300px;
-            min-width: 300px;
-        }
-        /* Hp */
-        @media (max-width: 768px) {
-            .container {
-              max-width: 450px;
-              margin: 20px auto;
-              padding: 20px;
-              overflow: hidden;
-            }
-            .biodata-container {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 10px;
-            }
-            .image-container {
-              flex: 1 1 100px;
-              min-width: 100px;
-              max-width: 300px;
-            }
-            .biodata {
-              flex: 1 1 200px;
-              min-width: 200px;
-              gap: 6px;
-            }
-        }
-
-        /* container skill */
-      .container-skill {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          gap: 50px;
-          padding-top: 20px;
-          margin-bottom: 50px;
-      }
-
-      /* media query container skill */
-      @media(max-width: 768px) {
-        .container-skill {
-          flex-direction: column;
-        }
-      }
-
       /* media query con-sosmed versi desktop */
       @media(max-width: 1900px) {
         .con-sosmed {
@@ -178,15 +106,6 @@
           padding-top: 30px;
         }
       }
-
-      .judul a {
-        display: flex;
-        justify-content: center;
-        font-weight: bold;
-        padding-left: 3px;
-        font-size: 1.4rem;
-        margin-bottom: 4px;
-      }
     </style>
 </head>
 <body style="overflow-x: hidden;">
@@ -241,10 +160,10 @@
                       <a class="nav-link text-dark" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active text-dark" href="/about">About Me</a>
+                      <a class="nav-link text-dark" href="/about">About Me</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-dark" href="/myProject">My Project</a>
+                      <a class="nav-link active text-dark" href="/myProject">My Project</a>
                     </li>
                   </ul>
 
@@ -267,10 +186,10 @@
                     <a class="nav-link" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="/about">About Me</a>
+                    <a class="nav-link" aria-current="page" href="/about">About Me</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/myProject">My Project</a>
+                    <a class="nav-link active" aria-current="page" href="/myProject">My Project</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -281,171 +200,98 @@
             </div>
           </nav>
 
-          {{-- About Me --}}
-          {{-- Judul --}}
-          <h1 class="judul-h1
-          d-flex 
-          justify-content-center 
-          align-items-center 
-          gap-2
-          mt-3"
-          style="font-size: 2rem;"
-          >About
-          <span class="fw-bold" 
-          style="font-style: italic;"
-          >Me</span></h1>
-
-          {{-- Biodata --}}
-          <div class="container border border-primary">
-            <div class="biodata-container">
-                <div class="image-container">
-                    <img src="{{ asset('img/agus.png') }}" alt="Agus Dana" class="img-fluid"
-                    style=" 
-                    border-radius: 20px;">
-                </div>
-
-                <div class="biodata">
-                  <h4 class="fw-bold">My <span>Biodata</span></h4>
-                    <p><strong>Nama:</strong> Agus Dana</p>
-                    <p><strong>Tanggal Lahir:</strong> 21 Mei 2008</p>
-                    <p><strong>Alamat:</strong> Bali, Indonesia</p>
-                    <p><strong>Kode Pos:</strong> 80119</p>
-                    <p><strong>Email:</strong> agusdana@gmail.com</p>
-                    <p><strong>Telepon:</strong> +62-81-7675-65726</p>
-                    <p class="mt-2">
-                      <span style="color: orange; font-weight: bold; font-size: 30px">8</span>
-                      <strong class="fst-italic">Project Complete</strong>
-                    </p>
-                </div>
-            </div>
-        </div>
-          {{-- About Me End --}} 
-
     {{-- Content Skill Require --}}
-    <!-- Skills Section -->
-    <div style="text-align: center; margin-top: 30px">
+    <!-- Judul Project -->
+    <div style="text-align: left; margin-top: 10px; padding-left: 15px">
       <!-- Title -->
       <h1 style="font-size: 2rem; font-weight: 500; margin-bottom: 30px">
-        MY <span style="font-weight: bold; color: #000; font-style: italic;">SKILLS</span>
+        MY <span style="font-weight: bold; color: #000; font-style: italic;">PROJECT</span>
       </h1>
+    </div>
 
-      <!-- Skills Icons -->
-      <div
-        class="container-skill"
-        style="
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          gap: 50px;
-          padding-top: 20px;
-          margin-bottom: 50px;
-        "
-      >
-        <!-- React Js -->
-        <div>
-          <img
-            src="{{ asset('img/react-js-removebg-preview.png') }}" 
-            href="#"
-            alt="React Js"
-            style="
-              width: 100px;
-              transition: transform 0.3s ease-in-out;
-              cursor: pointer;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          />
-          <h4 style="font-weight: 500; 
-          margin-top: 10px;"
-          >React Js</h4>
-        </div>
-
-        <!-- Next Js -->
-        <div>
-          <img
-            src="{{ asset('img/nextt.jpg') }}"
-            href="#"
-            alt="Next Js"
-            style="
-              width: 100px;
-              transition: transform 0.3s ease-in-out;
-              cursor: pointer;
-              border-radius: 50%"
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          />
-          <h4 style="font-weight: 500; 
-          margin-top: 20px"
-          >Next Js</h4>
-        </div>
-
-        <!-- Node Js -->
-        <div>
-          <img
-            src="{{ asset('img/node-js-removebg-preview.png') }}"
-            href="#"
-            alt="Node Js"
-            style="
-              width: 100px;
-              transition: transform 0.3s ease;
-              cursor: pointer;
-              margin-top: 20px
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          />
-          <h4 style="font-weight: 500; "
-          >Node Js</h4>
-        </div>
-      </div>
-
-      <!-- Experience Section -->
-      <div class="container-fluid">
-        <div class="row p-4 -md-4">
-          <div
-            class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center"
-          >
-            <h1 class="fw-bold p-2">My</h1>
-            <h5 class="fw-bold fst-italic">Experience</h5>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="row gap-4 gap-sm-2 justify-content-center">
-              <div
-                class="col-5 d-flex flex-column align-items-center p-4  rounded-3"
-                style="box-shadow: 0 5px 15px rgba(0, 0, 0, 1); background-color: #dc3545;"
-              >
-                <h1 class="fw-bold text-light">2+</h1>
-                <h6 class="fw-bold text-light">Years Experience</h6>
+    {{-- content 1 --}}
+    <div class="container-fluid">
+        
+        <div class="row d-sm-flex justify-content-center">
+            {{-- Img --}}
+          <img src="{{ asset('img/react-project.png') }}" alt="Foto-1" 
+            class="img-1 col-6 img-fluid" 
+              style="height: 320px;
+              width: 550px;
+              border-radius: 12px;
+              margin-top: 40px;
+              box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.8);">
+          <div class="col-md-6 d-flex align-items-center"> 
+            <div style="padding: 20px;">
+              <div class="judul d-flex align-items-center"> 
+                <h2 style="font-weight: bold">Project Web Sekolah:</h2>
               </div>
-              <div
-                class="col-5 d-flex flex-column align-items-center p-4  rounded-3"
-                style="box-shadow: 0 5px 15px rgba(0, 0, 0, 1); background-color: #ffc107;"
-              >
-                <h1 class="fw-bold text-dark">3</h1>
-                <h6 class="fw-bold text-dark">Achivement</h6>
-              </div>
-              <div
-                class="col-5 d-flex flex-column align-items-center p-4 rounded-3"
-                style="box-shadow: 0 5px 15px rgba(0, 0, 0, 1); background-color: #20c997;"
-              >
-                <h1 class="fw-bold text-light">6</h1>
-                <h6 class="fw-bold text-light">Complete Projects</h6>
-              </div>
-              <div
-                class="col-5 d-flex flex-column align-items-center p-4 rounded-3"
-                style="box-shadow: 0 5px 15px rgba(0, 0, 0, 1); background-color: #fd7e14;"
-              >
-                <h1 class="fw-bold text-dark">6</h1>
-                <h6 class="fw-bold text-dark">Clients</h6>
-              </div>
+              <p style="text-align: justify; line-height: 1.8;">
+                Project ini dibuat menggunakan salah satu Framework dari Java-
+                script yaitu ReactJs sebagai Front-End dan pada bagian BackEnd
+                saya menggunakan NodeJs.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
-      <!-- Footer -->
-<div class="container-fluid" style="background-color: #007bff; color: white; padding: 30px 10px; font-family: Arial, sans-serif;">
-  <div class="row text-center">
+    {{-- content 2 --}}
+    <div class="container-fluid">
+      <div class="row d-sm-flex justify-content-center">
+          {{-- Img --}}
+        <img src="{{ asset('img/portfolio.png') }}" alt="Foto-1" 
+          class="img-1 col-6 img-fluid" 
+            style="height: 310px;
+            width: 550px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.8);">
+        <div class="col-md-6 d-flex align-items-center"> 
+          <div style="padding: 20px;">
+            <div class="judul d-flex align-items-center"> 
+              <h2 style="font-weight: bold;">Project Web Portfolio:</h2>
+            </div>
+            <p style="text-align: justify; line-height: 1.8;">
+              Project ini dibuat menggunakan salah satu Framework dari PHP 
+              yaitu Laravel sebagai Backend dan pada bagian FrontEnd nya 
+              menggunakan Bootstrap yang sekaligus menggunakan Css Murni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{-- content 3 --}}
+    <div class="container-fluid">
+      <div class="row d-sm-flex justify-content-center">
+          {{-- Img --}}
+        <img src="{{ asset('img/portfolio.png') }}" alt="Foto-1" 
+          class="img-1 col-6 img-fluid" 
+            style="height: 310px;
+            width: 550px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.8);">
+        <div class="col-md-6 d-flex align-items-center"> 
+          <div style="padding: 20px;">
+            <div class="judul d-flex align-items-center"> 
+              <h2 style="font-weight: bold;">Project Web Portfolio:</h2>
+            </div>
+            <p style="text-align: justify; line-height: 1.8;">
+              Project ini dibuat menggunakan salah satu Framework dari PHP 
+              yaitu Laravel sebagai Backend dan pada bagian FrontEnd nya 
+              menggunakan Bootstrap yang sekaligus menggunakan Css Murni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{-- Content/Project yang dibuat --}}
+    
+    <!-- Footer -->
+  <div class="container-fluid" style="background-color: #007bff; color: white; padding: 30px 10px; font-family: Arial, sans-serif; margin-top: 40px">
+    <div class="row text-center">
       <!-- Bagian Connect -->
       <div class="col-md-6">
         <div class="judul-sosial">

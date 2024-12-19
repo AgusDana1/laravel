@@ -7,5 +7,9 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function() {
-    return view('about', ['title' => 'About Me']);
+    return view('about', ['title' => 'About Page']);
+});
+
+Route::get('/myProject', function () {
+    return view('myProject', ['title' => 'My Project']);
 });
