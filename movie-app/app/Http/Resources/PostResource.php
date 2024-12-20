@@ -7,41 +7,42 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class PostResource extends JsonResource
 {
-    // define properti
-    public $status;
-    public $message;
-    public $resource;
+    // Properti yang akan digunakan
+    public $status;  
+    public $message;  
+    public $resource; // data akan disimpan disini
 
     /**
      * __construct
      * 
      * @param mixed $status
      * @param mixed $message
-     * @param mixed $resources
+     * @param mixed $resource;
      * @return void
      */
 
-     public function __construct($status, $message, $resource)
-     {
+    //  membuat API resource
+    public function __construct($status, $message, $resource) 
+    {
         parent::__construct($resource);
         $this->status = $status;
         $this->message = $message;
-     }
+    }
 
-     /**
-      * Rubah resource ke Array
-      *
-      * @param \Illuminate\Http\Request $request
-      * @return array
-      */
+    /**
+     * Transform the resources
+     * 
+     * @param \Illiuminate\Http\Request $request
+     * @return array
+     */
 
-    // Membuat function toArray
-    public function toArray($request)
-    {
-        return  [
+    //  menempatkan hasil request ke array
+     public function toArray($request)
+     {
+        return [
             'success' => $this->status,
             'message' => $this->message,
             'data' => $this->resource
         ];
-    }
+     }
 }
