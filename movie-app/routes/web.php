@@ -16,12 +16,7 @@ Route::get('/myProject', function () {
     return view('myProject', ['title' => 'My Project']);
 });
 
-// Route::get('/dashboard', function() {
-//     return view('dashboard', ['title' => 'Dashboard']);
-// });
-
 Auth::routes();
-
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::controller(GoogleController::class)->group(function() {
